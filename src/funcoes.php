@@ -54,16 +54,15 @@ class Funcoes
     
     return $ultimoMaior;
   }
-	
 	public function SequenciaCrescente(array $arr): bool {
-    define('tamanhoMinimoArray', 3);
+    define('tamanhoMinimoArray', 2);
     define('quantidadeMaximaMenor', 1);
     $contaMenor = 0;
     $tamanhoArray = count($arr);
     
     if($tamanhoArray > tamanhoMinimoArray){
       for($i = 0; $i < $tamanhoArray-1; $i++){
-        if(($arr[$i] - $arr[$i + 1]) > 0){
+        if(($arr[$i] >= $arr[$i + 1])){
           $contaMenor += 1;
         }
       }
